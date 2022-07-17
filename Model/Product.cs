@@ -9,6 +9,7 @@ namespace C_Sharp_Fourth.Model
 {
     class Product
     {
+        static List<Product> products = new List<Product>();
         public int Number { get; set; }
         public string Object_Name { get; set; }
         public int Inventory_Number { get; set; }
@@ -17,10 +18,15 @@ namespace C_Sharp_Fourth.Model
         public DateTime dateTime { get; set; }
         public void Save()
         {
-            // DB
-            // Insert
+            products.Add(this);
             MessageBox.Show($"{Object_Name} added");
+
         }
+        public static List<Product> GetAllProducts()
+        {
+            return products;
+        }
+
 
 
     }
