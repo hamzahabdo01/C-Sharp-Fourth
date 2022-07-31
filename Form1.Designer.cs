@@ -42,11 +42,19 @@
             this.label3 = new System.Windows.Forms.Label();
             this.dt_Registered_Date = new System.Windows.Forms.DateTimePicker();
             this.btn_add = new System.Windows.Forms.Button();
-            this.btn_cancel = new System.Windows.Forms.Button();
+            this.btn_back = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.checkisAvailable = new System.Windows.Forms.CheckBox();
+            this.Item = new System.Windows.Forms.CheckedListBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // txt_number
@@ -155,20 +163,20 @@
             this.btn_add.UseVisualStyleBackColor = true;
             this.btn_add.Click += new System.EventHandler(this.btn_add_Click);
             // 
-            // btn_cancel
+            // btn_back
             // 
-            this.btn_cancel.Location = new System.Drawing.Point(940, 109);
-            this.btn_cancel.Name = "btn_cancel";
-            this.btn_cancel.Size = new System.Drawing.Size(102, 33);
-            this.btn_cancel.TabIndex = 15;
-            this.btn_cancel.Text = "Cancel";
-            this.btn_cancel.UseVisualStyleBackColor = true;
-            this.btn_cancel.Click += new System.EventHandler(this.btn_cancel_Click);
+            this.btn_back.Location = new System.Drawing.Point(940, 109);
+            this.btn_back.Name = "btn_back";
+            this.btn_back.Size = new System.Drawing.Size(102, 33);
+            this.btn_back.TabIndex = 15;
+            this.btn_back.Text = "Back";
+            this.btn_back.UseVisualStyleBackColor = true;
+            this.btn_back.Click += new System.EventHandler(this.btn_cancel_Click);
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(230, 224);
+            this.dataGridView1.Location = new System.Drawing.Point(296, 224);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 26;
@@ -179,13 +187,93 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+            // checkisAvailable
+            // 
+            this.checkisAvailable.AutoSize = true;
+            this.checkisAvailable.Location = new System.Drawing.Point(424, 167);
+            this.checkisAvailable.Name = "checkisAvailable";
+            this.checkisAvailable.Size = new System.Drawing.Size(81, 21);
+            this.checkisAvailable.TabIndex = 17;
+            this.checkisAvailable.Text = "Available";
+            this.checkisAvailable.UseVisualStyleBackColor = true;
+            // 
+            // Item
+            // 
+            this.Item.FormattingEnabled = true;
+            this.Item.Items.AddRange(new object[] {
+            "Product Availability",
+            "Delivery",
+            "Expired or not"});
+            this.Item.Location = new System.Drawing.Point(16, 342);
+            this.Item.Name = "Item";
+            this.Item.Size = new System.Drawing.Size(196, 80);
+            this.Item.TabIndex = 18;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.radioButton2);
+            this.groupBox1.Controls.Add(this.radioButton1);
+            this.groupBox1.Location = new System.Drawing.Point(12, 224);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(200, 100);
+            this.groupBox1.TabIndex = 19;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "groupBox1";
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Location = new System.Drawing.Point(23, 62);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(78, 21);
+            this.radioButton2.TabIndex = 1;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "Delivery";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(23, 35);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(143, 21);
+            this.radioButton1.TabIndex = 0;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "Product Availability";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Tahoma", 20F);
+            this.label7.Location = new System.Drawing.Point(825, 167);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(108, 41);
+            this.label7.TabIndex = 20;
+            this.label7.Text = "label7";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Tahoma", 17F);
+            this.label8.Location = new System.Drawing.Point(600, 172);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(208, 35);
+            this.label8.TabIndex = 21;
+            this.label8.Text = "Welcome back:";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1160, 450);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.Item);
+            this.Controls.Add(this.checkisAvailable);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.btn_cancel);
+            this.Controls.Add(this.btn_back);
             this.Controls.Add(this.btn_add);
             this.Controls.Add(this.dt_Registered_Date);
             this.Controls.Add(this.label3);
@@ -203,6 +291,8 @@
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -223,9 +313,16 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DateTimePicker dt_Registered_Date;
         private System.Windows.Forms.Button btn_add;
-        private System.Windows.Forms.Button btn_cancel;
+        private System.Windows.Forms.Button btn_back;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.CheckBox checkisAvailable;
+        private System.Windows.Forms.CheckedListBox Item;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
     }
 }
 

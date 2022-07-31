@@ -14,9 +14,10 @@ namespace C_Sharp_Fourth
 {
     public partial class Form1 : Form
     {
-        public Form1()
+        public Form1(string username)
         {
             InitializeComponent();
+            label7.Text = username;
         }
 
         private void btn_add_Click(object sender, EventArgs e)
@@ -78,17 +79,27 @@ namespace C_Sharp_Fourth
                     Count = int.Parse(txt_count.Text),
                     Price = Double.Parse(txt_price.Text),
                     dateTime = dt_Registered_Date.Value,
+                    isAvailable = checkisAvailable.Checked,
                 };
+                string items = "";
+                foreach (var Item in Item.CheckedItems)
+                {
+                    items += Item.ToString();
+                }
+                MessageBox.Show(items);
                 product.Save();
                 Clear();
                 dataGridView1.DataSource = null;
                 dataGridView1.DataSource = Product.GetAllProducts();
             }
+
         }
 
         private void btn_cancel_Click(object sender, EventArgs e)
         {
             this.Close();
+            Form2 screen = new Form2();
+            screen.Show();
         }
         public void Clear()
         {

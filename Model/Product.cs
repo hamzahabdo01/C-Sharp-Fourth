@@ -16,6 +16,7 @@ namespace C_Sharp_Fourth.Model
         public double Price { get; set; }
         public int Count { get; set; }
         public DateTime dateTime { get; set; }
+        public bool isAvailable { get; set; }
         public void Save()
         {
             products.Add(this);

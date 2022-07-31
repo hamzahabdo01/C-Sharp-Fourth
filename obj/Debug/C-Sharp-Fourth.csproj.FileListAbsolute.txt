@@ -9,3 +9,4 @@ C:\Users\ASUS\Documents\GitHub\C-Sharp-Fourth\obj\Debug\C-Sharp-Fourth.csproj.Ge
 C:\Users\ASUS\Documents\GitHub\C-Sharp-Fourth\obj\Debug\C-Sharp-Fourth.csproj.CoreCompileInputs.cache
 C:\Users\ASUS\Documents\GitHub\C-Sharp-Fourth\obj\Debug\C-Sharp-Fourth.exe
 C:\Users\ASUS\Documents\GitHub\C-Sharp-Fourth\obj\Debug\C-Sharp-Fourth.pdb
+C:\Users\ASUS\Documents\GitHub\C-Sharp-Fourth\obj\Debug\C_Sharp_Fourth.Form2.resources
