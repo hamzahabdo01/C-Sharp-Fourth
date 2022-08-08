@@ -24,7 +24,7 @@ namespace C_Sharp_Fourth
             string password = textBox2.Text;
             if(username == "admin" && password == "admin")
             {
-                Form1 screen = new Form1(username);
+                Form1 screen = new Form1(/*string username*/);
                 screen.Show();
                 Hide();
             }

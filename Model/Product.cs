@@ -27,6 +27,14 @@ namespace C_Sharp_Fourth.Model
         {
             return products;
         }
+        public static Product findOne(string name)
+        {
+            return products.Find(p => p.Object_Name == name);
+        }
+        public static List<Product> findbyCategory(string name)
+        {
+            return products.FindAll(p => p.Object_Name == name);
+        }
 
 
 

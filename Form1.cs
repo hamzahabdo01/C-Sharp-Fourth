@@ -14,10 +14,9 @@ namespace C_Sharp_Fourth
 {
     public partial class Form1 : Form
     {
-        public Form1(string username)
+        public Form1(/*string username*/)
         {
             InitializeComponent();
-            label7.Text = username;
         }
 
         private void btn_add_Click(object sender, EventArgs e)
@@ -108,6 +107,34 @@ namespace C_Sharp_Fourth
             txt_number.Text = " ";
             txt_ObjectName.Text = " ";
             txt_price.Text = " ";
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            
+            var item = Product.findOne(textBox1.Text);
+            if(item != null)
+            {
+                MessageBox.Show("Object Name Found");
+            }
+            else
+            {
+                MessageBox.Show("Object Name Not Found");
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            var item = Product.findbyCategory(textBox1.Text);
+            if (item != null)
+            {
+                MessageBox.Show("List Found");
+            }
+            else
+            {
+                MessageBox.Show("List Not Found");
+            }
+
         }
     }
 }
