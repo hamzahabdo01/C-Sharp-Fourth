@@ -55,6 +55,7 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.userControl11 = new C_Sharp_Fourth.UserControl1();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -179,11 +180,11 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(296, 224);
+            this.dataGridView1.Location = new System.Drawing.Point(673, 233);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 26;
-            this.dataGridView1.Size = new System.Drawing.Size(755, 198);
+            this.dataGridView1.Size = new System.Drawing.Size(473, 198);
             this.dataGridView1.TabIndex = 16;
             // 
             // errorProvider1
@@ -251,9 +252,8 @@
             this.label7.Font = new System.Drawing.Font("Tahoma", 20F);
             this.label7.Location = new System.Drawing.Point(825, 167);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(108, 41);
+            this.label7.Size = new System.Drawing.Size(0, 41);
             this.label7.TabIndex = 20;
-            this.label7.Text = "label7";
             // 
             // label8
             // 
@@ -292,11 +292,22 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // userControl11
+            // 
+            this.userControl11.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.userControl11.Location = new System.Drawing.Point(316, 233);
+            this.userControl11.Name = "userControl11";
+            this.userControl11.PDes = "";
+            this.userControl11.PTitle = "";
+            this.userControl11.Size = new System.Drawing.Size(337, 310);
+            this.userControl11.TabIndex = 25;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1160, 450);
+            this.ClientSize = new System.Drawing.Size(1171, 588);
+            this.Controls.Add(this.userControl11);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox1);
@@ -361,6 +372,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button button2;
+        private UserControl1 userControl11;
     }
 }
 

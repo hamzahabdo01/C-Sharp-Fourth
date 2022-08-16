@@ -136,5 +136,10 @@ namespace C_Sharp_Fourth
             }
 
         }
+
+        private void userControl11_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

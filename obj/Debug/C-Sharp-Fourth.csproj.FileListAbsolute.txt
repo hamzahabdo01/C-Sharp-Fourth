@@ -11,3 +11,5 @@ C:\Users\ASUS\Documents\GitHub\C-Sharp-Fourth\obj\Debug\C-Sharp-Fourth.exe
 C:\Users\ASUS\Documents\GitHub\C-Sharp-Fourth\obj\Debug\C-Sharp-Fourth.pdb
 C:\Users\ASUS\Documents\GitHub\C-Sharp-Fourth\obj\Debug\C_Sharp_Fourth.Form2.resources
 C:\Users\ASUS\Documents\GitHub\C-Sharp-Fourth\obj\Debug\C_Sharp_Fourth.Form3.resources
+C:\Users\ASUS\Documents\GitHub\C-Sharp-Fourth\obj\Debug\C_Sharp_Fourth.UserControl1.resources
+C:\Users\ASUS\Documents\GitHub\C-Sharp-Fourth\obj\Debug\C_Sharp_Fourth.Form4.resources
