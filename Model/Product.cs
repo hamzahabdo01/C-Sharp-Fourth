@@ -7,36 +7,36 @@ using System.Windows.Forms;
 
 namespace C_Sharp_Fourth.Model
 {
-    class Product
+    internal class Product
     {
-        static List<Product> products = new List<Product>();
-        public int Number { get; set; }
-        public string Object_Name { get; set; }
-        public int Inventory_Number { get; set; }
-        public double Price { get; set; }
-        public int Count { get; set; }
-        public DateTime dateTime { get; set; }
+        private static List<Product> Products = new List<Product>();
+        public string Number { get; set; }
+        public string Date { get; set; }
+        public string Inventory_Num { get; set; }
+        public string ObjectName { get; set; }
+        public string Price { get; set; }
+        public string Count { get; set; }
         public bool isAvailable { get; set; }
-        public void Save()
-        {
-            products.Add(this);
-            MessageBox.Show($"{Object_Name} added");
+        public string Payment { get; set; } //for group box
 
+
+        public void save()
+        {
+            Products.Add(this);
+            MessageBox.Show($"{ObjectName} added successfully");
         }
         public static List<Product> GetAllProducts()
         {
-            return products;
+            return Products;
+
         }
-        public static Product findOne(string name)
+        public static List<Product> SearchAllByName(string name)
         {
-            return products.Find(p => p.Object_Name == name);
+            return GetAllProducts().FindAll(item => item.ObjectName == name);
         }
-        public static List<Product> findbyCategory(string name)
+        public static Product SearchByInventoryNumber(string invent)
         {
-            return products.FindAll(p => p.Object_Name == name);
+            return GetAllProducts().Find(x => x.Inventory_Num == invent);
         }
-
-
-
     }
 }

@@ -1,25 +1,22 @@
-﻿using System;
+﻿using C_Sharp_Fourth.Model;
+using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using C_Sharp_Fourth.Model;
 
 namespace C_Sharp_Fourth
 {
-    public partial class Form1 : Form
+    public partial class AddProduct : Form
     {
-        public Form1(/*string username*/)
+        LoginPage loginPage;
+        public AddProduct(LoginPage Login)
         {
+            loginPage = Login;
             InitializeComponent();
+            user.Text = loginPage.username;
         }
-
-        private void btn_add_Click(object sender, EventArgs e)
+        Product product;
+        private void buttonadd_Click(object sender, EventArgs e)
         {
             Regex NumberCheck = new Regex(@"^[0-9]{3}-[0-9]{3}-[0-9]{4}$");
             Regex InventoryCheck = new Regex(@"^[0-9]{3}-[0-9]{3}$");
@@ -65,40 +62,45 @@ namespace C_Sharp_Fourth
                 {
                     errorProvider1.SetError(txt_ObjectName, "");
                 }
-
-
             }
             else
             {
-                Product product = new Product
+                errorProvider1.Clear();
+                product = new Product()
                 {
-                    Number = int.Parse(txt_number.Text),
-                    Object_Name = txt_ObjectName.Text,
-                    Inventory_Number = int.Parse(txt_inventory.Text),
-                    Count = int.Parse(txt_count.Text),
-                    Price = Double.Parse(txt_price.Text),
-                    dateTime = dt_Registered_Date.Value,
-                    isAvailable = checkisAvailable.Checked,
+                    Number = txt_number.Text,
+                    ObjectName = txt_ObjectName.Text,
+                    Count = txt_count.Text,
+                    Price = txt_price.Text,
+                    Inventory_Num = txt_inventory.Text,
+                    Date = dateTimePicker1.Text,
+                    isAvailable = checkBox1.Checked
+
                 };
-                string items = "";
-                foreach (var Item in Item.CheckedItems)
+                if (radioButton1.Checked)
                 {
-                    items += Item.ToString();
+                    product.Payment = radioButton1.Text;
                 }
-                MessageBox.Show(items);
-                product.Save();
+                else if (radioButton2.Checked)
+                {
+                    product.Payment = radioButton2.Text;
+                }
+                string items = " ";
+                foreach (var item in Item.CheckedItems)
+                {
+                    items += item.ToString();
+                }
+                MessageBox.Show("Items are:\n" + items);
+                product.save();
                 Clear();
                 dataGridView1.DataSource = null;
                 dataGridView1.DataSource = Product.GetAllProducts();
             }
-
         }
 
-        private void btn_cancel_Click(object sender, EventArgs e)
+        private void buttoncancel_Click(object sender, EventArgs e)
         {
             this.Close();
-            Form2 screen = new Form2();
-            screen.Show();
         }
         public void Clear()
         {
@@ -109,36 +111,36 @@ namespace C_Sharp_Fourth
             txt_price.Text = " ";
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Sinventbut_Click(object sender, EventArgs e)
         {
-            
-            var item = Product.findOne(textBox1.Text);
-            if(item != null)
+            var item = Product.SearchByInventoryNumber(txt_search.Text);
+            if (item != null)
             {
-                MessageBox.Show("Object Name Found");
+                MessageBox.Show("Inventory Number Found");
             }
             else
             {
-                MessageBox.Show("Object Name Not Found");
+                MessageBox.Show("Inventory Number Not Found");
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void Snamebut_Click(object sender, EventArgs e)
         {
-            var item = Product.findbyCategory(textBox1.Text);
+            var item = Product.SearchAllByName(txt_search.Text);
             if (item != null)
             {
-                MessageBox.Show("List Found");
+                string all = "";
+                foreach (Product n in item)
+                {
+                    all += n.ObjectName + "\n";
+                }
+                MessageBox.Show(all);
             }
             else
             {
                 MessageBox.Show("List Not Found");
             }
 
-        }
-
-        private void userControl11_Load(object sender, EventArgs e)
-        {
 
         }
     }

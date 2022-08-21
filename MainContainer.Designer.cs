@@ -1,6 +1,6 @@
 ﻿namespace C_Sharp_Fourth
 {
-    partial class Form3
+    partial class MainContainer
     {
         /// <summary>
         /// Required designer variable.
@@ -30,15 +30,16 @@
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.productToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.addNewProductToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.updateProductToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addProductToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.showProductToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.categoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.addNewCategoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.showListToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
+            this.menuStrip1.BackColor = System.Drawing.SystemColors.Control;
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.productToolStripMenuItem,
@@ -52,40 +53,42 @@
             // productToolStripMenuItem
             // 
             this.productToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.addNewProductToolStripMenuItem,
-            this.updateProductToolStripMenuItem});
+            this.addProductToolStripMenuItem,
+            this.showProductToolStripMenuItem});
             this.productToolStripMenuItem.Name = "productToolStripMenuItem";
             this.productToolStripMenuItem.Size = new System.Drawing.Size(74, 24);
             this.productToolStripMenuItem.Text = "Product";
             // 
-            // addNewProductToolStripMenuItem
+            // addProductToolStripMenuItem
             // 
-            this.addNewProductToolStripMenuItem.Name = "addNewProductToolStripMenuItem";
-            this.addNewProductToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.addNewProductToolStripMenuItem.Text = "Add New Product";
-            this.addNewProductToolStripMenuItem.Click += new System.EventHandler(this.addNewProductToolStripMenuItem_Click);
+            this.addProductToolStripMenuItem.Name = "addProductToolStripMenuItem";
+            this.addProductToolStripMenuItem.Size = new System.Drawing.Size(179, 26);
+            this.addProductToolStripMenuItem.Text = "Add Product";
+            this.addProductToolStripMenuItem.Click += new System.EventHandler(this.addProductToolStripMenuItem_Click);
             // 
-            // updateProductToolStripMenuItem
+            // showProductToolStripMenuItem
             // 
-            this.updateProductToolStripMenuItem.Name = "updateProductToolStripMenuItem";
-            this.updateProductToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.updateProductToolStripMenuItem.Text = "Update Product";
+            this.showProductToolStripMenuItem.Name = "showProductToolStripMenuItem";
+            this.showProductToolStripMenuItem.Size = new System.Drawing.Size(179, 26);
+            this.showProductToolStripMenuItem.Text = "View Product";
+            this.showProductToolStripMenuItem.Click += new System.EventHandler(this.showProductToolStripMenuItem_Click);
             // 
             // categoryToolStripMenuItem
             // 
             this.categoryToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.addNewCategoryToolStripMenuItem});
+            this.showListToolStripMenuItem});
             this.categoryToolStripMenuItem.Name = "categoryToolStripMenuItem";
             this.categoryToolStripMenuItem.Size = new System.Drawing.Size(83, 24);
             this.categoryToolStripMenuItem.Text = "Category";
             // 
-            // addNewCategoryToolStripMenuItem
+            // showListToolStripMenuItem
             // 
-            this.addNewCategoryToolStripMenuItem.Name = "addNewCategoryToolStripMenuItem";
-            this.addNewCategoryToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.addNewCategoryToolStripMenuItem.Text = "Add New Category";
+            this.showListToolStripMenuItem.Name = "showListToolStripMenuItem";
+            this.showListToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.showListToolStripMenuItem.Text = "Show List";
+            this.showListToolStripMenuItem.Click += new System.EventHandler(this.showListToolStripMenuItem_Click);
             // 
-            // Form3
+            // MainContainer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -93,8 +96,8 @@
             this.Controls.Add(this.menuStrip1);
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
-            this.Name = "Form3";
-            this.Text = "Form3";
+            this.Name = "MainContainer";
+            this.Text = "MainContainer";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -106,9 +109,9 @@
 
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem productToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem addNewProductToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem updateProductToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem addProductToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem categoryToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem addNewCategoryToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem showProductToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem showListToolStripMenuItem;
     }
 }
