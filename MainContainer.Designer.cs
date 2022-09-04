@@ -33,7 +33,6 @@
             this.addProductToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.showProductToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.categoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.showListToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -75,18 +74,9 @@
             // 
             // categoryToolStripMenuItem
             // 
-            this.categoryToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.showListToolStripMenuItem});
             this.categoryToolStripMenuItem.Name = "categoryToolStripMenuItem";
             this.categoryToolStripMenuItem.Size = new System.Drawing.Size(83, 24);
             this.categoryToolStripMenuItem.Text = "Category";
-            // 
-            // showListToolStripMenuItem
-            // 
-            this.showListToolStripMenuItem.Name = "showListToolStripMenuItem";
-            this.showListToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.showListToolStripMenuItem.Text = "Show List";
-            this.showListToolStripMenuItem.Click += new System.EventHandler(this.showListToolStripMenuItem_Click);
             // 
             // MainContainer
             // 
@@ -112,6 +102,5 @@
         private System.Windows.Forms.ToolStripMenuItem addProductToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem categoryToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem showProductToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem showListToolStripMenuItem;
     }
 }

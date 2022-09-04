@@ -41,17 +41,5 @@ namespace C_Sharp_Fourth
             view.MdiParent = this;
             view.Show();
         }
-
-        private void showListToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            if (ActiveMdiChild != null)
-            {
-                ActiveMdiChild.Close();
-            }
-
-            ToDoList view = new ToDoList();
-            view.MdiParent = this;
-            view.Show();
-        }
     }
 }

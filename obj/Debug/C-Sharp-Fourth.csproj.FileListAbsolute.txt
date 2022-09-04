@@ -14,4 +14,4 @@ C:\Users\ASUS\Documents\GitHub\C-Sharp-Fourth\obj\Debug\C_Sharp_Fourth.ProductCa
 C:\Users\ASUS\Documents\GitHub\C-Sharp-Fourth\obj\Debug\C_Sharp_Fourth.DetailPage.resources
 C:\Users\ASUS\Documents\GitHub\C-Sharp-Fourth\obj\Debug\C_Sharp_Fourth.ViewProductCard.resources
 C:\Users\ASUS\Documents\GitHub\C-Sharp-Fourth\obj\Debug\C_Sharp_Fourth.MainContainer.resources
-C:\Users\ASUS\Documents\GitHub\C-Sharp-Fourth\obj\Debug\C_Sharp_Fourth.ToDoList.resources
+C:\Users\ASUS\Documents\GitHub\C-Sharp-Fourth\obj\Debug\C_Sharp_Fourth.DBConnector.resources
